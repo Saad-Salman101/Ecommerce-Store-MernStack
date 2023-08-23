@@ -1,14 +1,6 @@
 {
-    "builds":[
-        {
-            "src":"./backend/server.js",
-            "use":"@vercel/node"
-        }
-    ],
-    "routes":[
-        {
-            "src":"/.*",
-            "dest":"server.js"
-        }
-    ]
+  "version": 2,
+  "name": "native-server",
+  "builds": [{ "src": "backend/server.js", "use": "@vercel/node" }],
+  "routes": [{ "src": "/(.*)", "dest": "/server.js" }]
 }
